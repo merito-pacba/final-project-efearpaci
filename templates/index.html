@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for postcard in postcards %}
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{ postcard.image_url }}" class="card-img-top" alt="Postcard from {{ postcard.city_name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ postcard.city_name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">From: {{ postcard.sender_name }}</h6>
+                <p class="card-text">{{ postcard.message }}</p>
+            </div>
+            <div class="card-footer text-muted">
+                <small>Sent on {{ postcard.date_created.strftime('%Y-%m-%d') }}</small>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="col-12 text-center">
+        <p class="lead">No postcards yet. Be the first to send one!</p>
+        <a href="{{ url_for('create') }}" class="btn btn-primary">Create Postcard</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
