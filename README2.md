@@ -10,5 +10,7 @@ Best regards,
 Efe Melih Arpaci
 
 The links of my own repo and web app:
+
 https://github.com/efearpaci/cloud_project
-postcard-app-efe-e9fwgbc4fcgkfpcr.polandcentral-01.azurewebsites.net
+
+https://postcard-app-efe-e9fwgbc4fcgkfpcr.polandcentral-01.azurewebsites.net
